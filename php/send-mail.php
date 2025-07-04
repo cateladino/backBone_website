@@ -2,11 +2,13 @@
 // phpcs:ignoreFile
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 // Variables
-$name = trim($_POST['UserName']);
-$email = trim($_POST['UserEmail']);
-$subject = trim($_POST['subject']);
+$name = trim($_POST['nombre']);
+$email = trim($_POST['Correo']);
+$company = trim($_POST['empresa']);
+$phone = trim($_POST['Telefono']);
+$state = trim($_POST['MunicipioEstado']);
 $message = trim($_POST['message']);
-$to = "your-email@email.com"; // Change with your email address
+$to = "alejoladino0724@gmail.com"; // Change with your email address
 
 // Email address validation - works with php 5.2+
 function is_email_valid($email) {
@@ -14,11 +16,11 @@ function is_email_valid($email) {
 }
 
 
-if( isset($name) && isset($email) && isset($subject) && isset($message) && is_email_valid($email) ) {
+if( isset($name) && isset($email) && isset($company) && isset($phone) && isset($message) && is_email_valid($email) ) {
 
 	// Avoid Email Injection and Mail Form Script Hijacking
 	$pattern = "/(content-type|bcc:|cc:|to:)/i";
-	if( preg_match($pattern, $name) || preg_match($pattern, $email) || preg_match($pattern, $message) ) {
+	if( preg_match($pattern, $name) || preg_match($pattern, $email) || preg_match($pattern, $company) || preg_match($pattern, $message) ) {
 		exit;
 	}
 
@@ -28,7 +30,7 @@ if( isset($name) && isset($email) && isset($subject) && isset($message) && is_em
 	$body = <<<EOD
 	<strong>Name:</strong> $name <br>
 	<strong>Email:</strong> <a href="mailto:"$email">$email</a> <br> 
-	<strong>Subject:</strong> $subject <br><br><br>
+	<strong>company:</strong> $company <br><br><br>
 	
 	<strong>Message:</strong> <br> $message 
 EOD;
@@ -39,7 +41,7 @@ EOD;
 	$headers .= 'Content-type: text/html; charset=UTF-8 ' . "\r\n";
 
 	// PHP email sender
-	mail($to, $subject, $body, $headers);
+	mail($to, $company, $body, $headers);
 }
 
 }
