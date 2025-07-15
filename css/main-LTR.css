@@ -87,6 +87,22 @@ Template Description: IT Solutions & Business Services Responsive HTML5 Bootstra
   border-radius: 1rem;
 }
 
+.contact-info-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.contact-info-card .icon {
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.contact-info-card .info {
+  line-height: 1.4;
+}
+
 .pre-title {
   position: relative;
   font-size: 1rem;
