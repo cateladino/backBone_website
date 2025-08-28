@@ -36,6 +36,26 @@
         <!-- main-LTR -->
         <link rel="stylesheet" href="css/main-LTR.css">
         <title> Grupo BackBone | Servicios</title>
+
+        <style>
+          .privacy-check {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin: 8px 0;
+            font-size: 14px;
+          }
+          .cta-area {
+            margin-top: 0;
+          }
+
+          .btn-solid.subscribe-btn {
+            padding-top: 4px;
+            padding-bottom: 4px;
+            font-size: 15px; /* Opcional: ajusta el tamaño del texto */
+            line-height: 1.1;
+          }
+        </style>
   </head>
   <body class=" dark-theme ">
     <!--Start Page Header-->
@@ -632,7 +652,13 @@
                     <div class="cta-area">
                       <input class="btn-solid subscribe-btn" type="submit" value="Enviar" name="subscribe"/>
                     </div>
-                  </div><span class="email-notice">*No compartiremos tu información personal</span>
+                    <div class="privacy-check">
+                      <input type="checkbox" id="privacy-policy" name="privacy-policy" required>
+                      <label for="privacy-policy">He leído y acepto la <a href="#0" data-bs-toggle="modal" data-bs-target="#privacyPolicyModal">Política de Privacidad</a></label>
+                     
+                      </div><span class="email-notice">*No compartiremos tu información personal</span>
+                    </div> 
+                     
                 </form>
               </div>
             </div>
