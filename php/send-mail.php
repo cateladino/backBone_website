@@ -8,7 +8,7 @@ $company = trim($_POST['empresa']);
 $phone = trim($_POST['Telefono']);
 $state = trim($_POST['MunicipioEstado']);
 $message = trim($_POST['message']);
-$to = "alejoladino0724@gmail.com"; // Change with your email address
+$to = "alejandrogomez2339@gmail.com"; // Change with your email address
 
 // Email address validation - works with php 5.2+
 function is_email_valid($email) {

@@ -43,25 +43,7 @@
         <link rel="stylesheet" href="css/main-LTR.css">
         <title>Grupo BackBone | Inicio</title>
 
-        <style>
-          .privacy-check {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            margin: 8px 0;
-            font-size: 14px;
-          }
-          .cta-area {
-            margin-top: 0;
-          }
-
-          .btn-solid.subscribe-btn {
-            padding-top: 4px;
-            padding-bottom: 4px;
-            font-size: 15px; /* Opcional: ajusta el tamaño del texto */
-            line-height: 1.1;
-          }
-        </style>
+        <link rel="stylesheet" href="css/my-styles.css">
   </head>
   <body class=" dark-theme ">
     <!--Start Page Header-->
@@ -905,7 +887,14 @@
     <div class="loading-screen" id="loading-screen"><span class="bar top-bar"></span><span class="bar down-bar"></span><span class="progress-line"></span><span class="loading-counter"> </span></div>
     <!-- End loading-screen Component-->
     <!-- Start back-to-top Button-->
-    <div class="back-to-top" id="back-to-top"><i class="bi bi-arrow-up icon "></i>
+    <!-- Botón flotante de WhatsApp -->
+    <div class="whatsapp-float" id="whatsapp-float">
+      <a href="https://wa.me/525530195816?text=Hola%2C%20me%20gustaria%20conocer%20los%20servicios%20de%20BackBone!" target="_blank" rel="noopener" aria-label="WhatsApp">
+        <i class="bi bi-whatsapp icon"></i>
+      </a>
+    </div>
+    <div class="back-to-top" id="back-to-top">
+      <i class="bi bi-arrow-up icon "></i>
     </div>
     <!-- End back-to-top Button-->
     <!-- Start privacy-policy-modal-->
@@ -1249,7 +1238,8 @@
         <script src="js/vendors/jquery.fancybox.min.js"></script>
         
         <!--     main     -->
-        <script src="js/main.js"></script>
+  <script src="js/main.js"></script>
+  <link rel="stylesheet" href="my-styles.css">
         <script>
           const logo = document.getElementById('site-logo');
           const darkButton = document.querySelector('.go-dark');
